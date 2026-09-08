@@ -5,6 +5,7 @@ public class PaidOrderState implements OrderState {
     @Override
     public void pay(Order order) {
         System.out.println("Already PAID!");
+        order.setState(new PreparingOrderState());
     }
 
     @Override
